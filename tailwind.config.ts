@@ -8,6 +8,37 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "main-background": "#222020",
+        "secondary": "#878787",
+        "accent": "#DBED6D",
+      },
+      fontSize: {
+        'h2': "48px",
+        'h1': "64px",
+        'h3': "40px",
+        'h1-mobile': "32px"
+      },
+
+      animation: {
+        fadeIn: 'fadeInUp 1s ease-in-out',
+      },
+
+      keyframes: () => ({
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            visibility: 'hidden',
+            transform: 'translateY(25%)',
+          },
+          '100%': {
+            opacity: '1',
+            visibility: 'visible',
+            transform: 'translateY(0)',
+          },
+        },
+      }),
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +46,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+  ],
 };
 export default config;
