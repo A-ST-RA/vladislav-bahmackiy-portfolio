@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://bahmackiy-dev.ru/sitemap.xml
